@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Irony Demo Model</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="iro_header_container">
+            <label class="title_header">IRONY DETECTION DEMO</label>
+            <label class="description_header">Demo para probar un modelo de deteccion de ironia en el texto. Este modelo es capaz de detectar ironia dada una frase. Ha sido entrenado en base a tweets, con lo que es interesante pronerlo a prueba en un ambiente similar. </label>
+        </div>
+        <div class="iro_input_container">
+            <input class="iro_input" id="INPUT_LABEL">
+            <button class="iro_input_button" id="INPUT_BTTN">TEST</button>
+        </div>
+        <div class="iro_output_container">
+            <label class="output_label" id="OUTPUT_LABEL"></label>
+        </div>
+    </div>
+  </body>
+
+  <!-- Import TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+
+  <!-- Import MyCode -->
+  <script src="DomController.js"></script>
+  <script src="TensorController.js"></script>
+</html>
