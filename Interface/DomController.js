@@ -18,11 +18,11 @@ var CONTROLLER =
             switch (event.type) 
             {
                 case "click":
-                    TENSOR.predict(this.ironic_input.value.trim())
+                    request(this.ironic_input.value.trim())
                     break;
                 case "keydown":
                 if(event.code == "Enter")
-                    TENSOR.predict(this.ironic_input.value.trim())
+                    request(this.ironic_input.value.trim())
                 break;
             }
         }
@@ -31,6 +31,30 @@ var CONTROLLER =
             console.warn("INPUT IS EMPTY")
         }
         
+    },
+
+    request: function(sentence) {
+        fetch('/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              sentence_: sentence
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            var resultado = data.resultado;
+            if (int(resultado) => 0.5)
+            output_label.textContent = "Frase ironica en un "+str(int(resultado)*100)+"%"
+            else
+            output_label.textContent = "Frase no ironica en un "+str(int(resultado)*100)+"%"
+          })
+          .catch(error => {
+            
+            console.error('Error:', error);
+          });
     }
 };
 
