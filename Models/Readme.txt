@@ -1,0 +1,2 @@
+As the models are too big for the github storage, i leave a link to mi driv where these models are stored.
+https://drive.google.com/drive/folders/1bIkZgoH0sS9CWSVbNZi7sdkyrfCNG_pN?usp=sharing Any UPF profesor should be able to use this link, contact me if not
